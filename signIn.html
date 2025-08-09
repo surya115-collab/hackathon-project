@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Uber Ride Booking</title>
+  <link rel="stylesheet" href="signIn.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Step 1: Pickup & Drop Location -->
+    <div id="step1" class="step">
+      <h2>Book Your Ride</h2>
+      <input type="text" id="pickup" placeholder="Enter Pickup Location">
+      <input type="text" id="drop" placeholder="Enter Drop Location">
+      <button onclick="showCharges()">Confirm Drop Location</button>
+    </div>
+
+    <!-- Step 2: Ride Charges -->
+    <div id="step2" class="step hidden">
+      <h2>Select Your Ride</h2>
+      <div class="ride-options">
+        <div class="ride-option" data-ride="Bike" onclick="selectRide(this)">
+        <h3>Bike 🏍️</h3>
+        <p><span id="bikeCharge"></span></p>
+      </div>
+      <div class="ride-option" data-ride="Auto" onclick="selectRide(this)">
+        <h3>Auto 🛺</h3>
+        <p><span id="autoCharge"></span></p>
+      </div>
+      <div class="ride-option" data-ride="Car" onclick="selectRide(this)">
+        <h3>Car 🚗</h3>
+        <p><span id="carCharge"></span></p>
+      </div>
+
+      </div>
+      <button onclick="confirmRide()" >Confirm Ride</button>
+    </div>
+
+    <!-- Step 3: Driver Details -->
+    <div id="step3" class="step hidden">
+
+          <h2>Driver Details</h2>
+          
+          <div class="driver-container">
+            <div class="driver-info">
+              <p><strong>Name:</strong> Rajesh Kumar</p>
+              <p><strong>Vehicle:</strong> White Suzuki Alto</p>
+              <p><strong>Plate:</strong> TS09 AB 2345</p>
+              <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" alt="Driver" class="driver-img">
+            </div>
+            
+            <div class="driver-map">
+              <img src="https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif">
+            </div>
+        
+        </div>
+
+    </div>
+  </div>
+  <script src="signIn.js"></script>
+</body>
+</html>
